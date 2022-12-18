@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>group.springframework</groupId>
+		<artifactId>spring-cloud-dependencies-parent</artifactId>
+		<version>2021.0.1</version>
+		<relativePath/>
+	</parent>
+	<groupId>com.blu</groupId>
+	<artifactId>blu-common-bom</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0.0</version>
+
+	<properties>
+		<mysql.connector.version>8.0.30</mysql.connector.version>
+		<swagger.core.version>1.5.22</swagger.core.version>
+		<common.version>1.0.0</common.version>
+		<common.api.tabao.version>1.0.0</common.api.tabao.version>
+		<common.msg.tabao.version>1.0.0</common.msg.tabao.version>
+		<common.taobao.version>1.1.0</common.taobao.version>
+		<mybatis-plus.version>3.5.2</mybatis-plus.version>
+		<webmagic.version>0.7.3</webmagic.version>
+		<jsoup.version>1.15.2</jsoup.version>
+		<httpclient.version>4.5.7</httpclient.version>
+		<dom4j.version>2.1.1</dom4j.version>
+		<opencsv.version>5.0</opencsv.version>
+		<easyexcel.version>3.1.1</easyexcel.version>
+		<thumbnailator.version>0.4.8</thumbnailator.version>
+		<vavr.version>0.10.3</vavr.version>
+		<guava.version>31.1-jre</guava.version>
+		<spring.security.oauth2.autoconfigure>2.6.8</spring.security.oauth2.autoconfigure>
+		<spring.security.oauth2>2.5.2.RELEASE</spring.security.oauth2>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.security.oauth</groupId>
+				<artifactId>spring-security-oauth2</artifactId>
+				<version>${spring.security.oauth2}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.security.oauth.boot</groupId>
+				<artifactId>spring-security-oauth2-autoconfigure</artifactId>
+				<version>${spring.security.oauth2.autoconfigure}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+
+			<!--函数式编程辅助-->
+			<dependency>
+				<groupId>io.vavr</groupId>
+				<artifactId>vavr</artifactId>
+				<version>${vavr.version}</version>
+			</dependency>
+
+			<!--common 工具包-->
+			<dependency>
+				<groupId>com.blu-ray.cloud</groupId>
+				<artifactId>common-taobao</artifactId>
+				<version>${common.taobao.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.blu-ray.cloud</groupId>
+				<artifactId>common-api</artifactId>
+				<version>${common.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.blu-ray.cloud</groupId>
+				<artifactId>common-core</artifactId>
+				<version>${common.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.blu-ray.cloud</groupId>
+				<artifactId>api-taobao</artifactId>
+				<version>${common.api.tabao.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.blu-ray.cloud</groupId>
+				<artifactId>msg-taobao</artifactId>
+				<version>${common.msg.tabao.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.blu-ray.cloud</groupId>
+				<artifactId>common-channel</artifactId>
+				<version>${common.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.blu-ray.cloud</groupId>
+				<artifactId>common-entity</artifactId>
+				<version>${common.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.blu-ray.cloud</groupId>
+				<artifactId>common-listener</artifactId>
+				<version>${common.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.blu-ray.cloud</groupId>
+				<artifactId>common-proxy</artifactId>
+				<version>${common.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.blu-ray.cloud</groupId>
+				<artifactId>common-response</artifactId>
+				<version>${common.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.blu-ray.cloud</groupId>
+				<artifactId>common-taobao</artifactId>
+				<version>${common.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.blu-ray.cloud</groupId>
+				<artifactId>common-dingding</artifactId>
+				<version>${common.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.blu-ray.cloud</groupId>
+				<artifactId>common-jsb</artifactId>
+				<version>${common.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.blu-ray.cloud</groupId>
+				<artifactId>common-dianzhentan</artifactId>
+				<version>${common.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jsoup</groupId>
+				<artifactId>jsoup</artifactId>
+				<version>${jsoup.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>easyexcel</artifactId>
+				<version>${easyexcel.version}</version>
+			</dependency>
+
+			<!--网络相关-->
+			<dependency>
+				<groupId>org.dom4j</groupId>
+				<artifactId>dom4j</artifactId>
+				<version>${dom4j.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+				<version>${httpclient.version}</version>
+				<optional>true</optional>
+			</dependency>
+
+			<!--mysql 驱动-->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.connector.version}</version>
+			</dependency>
+
+			<!--swagger 最新依赖内置版本-->
+			<dependency>
+				<groupId>io.swagger</groupId>
+				<artifactId>swagger-models</artifactId>
+				<version>${swagger.core.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.swagger</groupId>
+				<artifactId>swagger-annotations</artifactId>
+				<version>${swagger.core.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>us.codecraft</groupId>
+				<artifactId>webmagic-core</artifactId>
+				<version>${webmagic.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>us.codecraft</groupId>
+				<artifactId>webmagic-extension</artifactId>
+				<version>${webmagic.version}</version>
+			</dependency>
+
+			<!--mybatis plus extension,包含了mybatis plus core-->
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-extension</artifactId>
+				<version>${mybatis-plus.version}</version>
+			</dependency>
+
+			<!--mybatis-->
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>${mybatis-plus.version}</version>
+			</dependency>
+
+			<!--csv-->
+			<dependency>
+				<groupId>com.opencsv</groupId>
+				<artifactId>opencsv</artifactId>
+				<version>${opencsv.version}</version>
+				<optional>true</optional>
+			</dependency>
+			<!--图片处理-->
+			<dependency>
+				<groupId>net.coobird</groupId>
+				<artifactId>thumbnailator</artifactId>
+				<version>${thumbnailator.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>2.4</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-collections4</artifactId>
+				<version>4.4</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.11</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-stream-reactive -->
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-stream-reactive</artifactId>
+				<version>2.2.1.RELEASE</version>
+			</dependency>
+
+
+			<!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>1.9.4</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+			<dependency>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>1.2</version>
+			</dependency>
+
+
+		</dependencies>
+	</dependencyManagement>
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub OWNER Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/yaoqiangpersonal/common-bom</url>
+		</repository>
+	</distributionManagement>
+
+</project>
