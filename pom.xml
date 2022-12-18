@@ -19,9 +19,6 @@
 		<mysql.connector.version>8.0.30</mysql.connector.version>
 		<swagger.core.version>1.5.22</swagger.core.version>
 		<common.version>1.0.0</common.version>
-		<common.api.tabao.version>1.0.0</common.api.tabao.version>
-		<common.msg.tabao.version>1.0.0</common.msg.tabao.version>
-		<common.taobao.version>1.1.0</common.taobao.version>
 		<mybatis-plus.version>3.5.2</mybatis-plus.version>
 		<webmagic.version>0.7.3</webmagic.version>
 		<jsoup.version>1.15.2</jsoup.version>
@@ -66,89 +63,43 @@
 
 			<!--common 工具包-->
 			<dependency>
-				<groupId>com.blu-ray.cloud</groupId>
-				<artifactId>common-taobao</artifactId>
+				<groupId>com.blu</groupId>
+				<artifactId>blu-common-taobao</artifactId>
 				<version>${common.taobao.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>com.blu-ray.cloud</groupId>
-				<artifactId>common-api</artifactId>
+				<groupId>com.blu</groupId>
+				<artifactId>blu-common-api</artifactId>
 				<version>${common.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>com.blu-ray.cloud</groupId>
-				<artifactId>common-core</artifactId>
-				<version>${common.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.blu-ray.cloud</groupId>
-				<artifactId>api-taobao</artifactId>
-				<version>${common.api.tabao.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.blu-ray.cloud</groupId>
-				<artifactId>msg-taobao</artifactId>
-				<version>${common.msg.tabao.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.blu-ray.cloud</groupId>
-				<artifactId>common-channel</artifactId>
-				<version>${common.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.blu-ray.cloud</groupId>
-				<artifactId>common-entity</artifactId>
-				<version>${common.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.blu-ray.cloud</groupId>
-				<artifactId>common-listener</artifactId>
-				<version>${common.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.blu-ray.cloud</groupId>
-				<artifactId>common-proxy</artifactId>
+				<groupId>com.blu</groupId>
+				<artifactId>blu-common-core</artifactId>
 				<version>${common.version}</version>
 			</dependency>
 
 
+
 			<dependency>
-				<groupId>com.blu-ray.cloud</groupId>
-				<artifactId>common-response</artifactId>
+				<groupId>com.blu</groupId>
+				<artifactId>blu-common-taobao</artifactId>
 				<version>${common.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>com.blu-ray.cloud</groupId>
-				<artifactId>common-taobao</artifactId>
+				<groupId>com.blu</groupId>
+				<artifactId>blu-common-dingtalk</artifactId>
 				<version>${common.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>com.blu-ray.cloud</groupId>
-				<artifactId>common-dingding</artifactId>
+				<groupId>com.blu</groupId>
+				<artifactId>blu-common-jsb</artifactId>
 				<version>${common.version}</version>
 			</dependency>
 
-			<dependency>
-				<groupId>com.blu-ray.cloud</groupId>
-				<artifactId>common-jsb</artifactId>
-				<version>${common.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.blu-ray.cloud</groupId>
-				<artifactId>common-dianzhentan</artifactId>
-				<version>${common.version}</version>
-			</dependency>
 
 			<dependency>
 				<groupId>org.jsoup</groupId>
@@ -285,7 +236,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub OWNER Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/yaoqiangpersonal/common-bom</url>
+			<url>https://maven.pkg.github.com/yaoqiangpersonal/blu-common-bom</url>
 		</repository>
 	</distributionManagement>
 
