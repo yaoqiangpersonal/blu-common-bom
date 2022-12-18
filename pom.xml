@@ -13,12 +13,16 @@
 	<groupId>com.blu</groupId>
 	<artifactId>blu-common-bom</artifactId>
 	<packaging>pom</packaging>
-	<version>1.0.2</version>
+	<version>1.0.7</version>
 
 	<properties>
 		<mysql.connector.version>8.0.30</mysql.connector.version>
 		<swagger.core.version>1.5.22</swagger.core.version>
+		<common.jsb.version>1.0.3</common.jsb.version>
+		<common.taobao.version>1.1.0</common.taobao.version>
+		<api.taobao.version>1.0.0</api.taobao.version>
 		<common.version>1.0.0</common.version>
+		<security.oauth2.version>1.0.0</security.oauth2.version>
 		<mybatis-plus.version>3.5.2</mybatis-plus.version>
 		<webmagic.version>0.7.3</webmagic.version>
 		<jsoup.version>1.15.2</jsoup.version>
@@ -67,7 +71,11 @@
 				<artifactId>blu-common-taobao</artifactId>
 				<version>${common.taobao.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>com.blu</groupId>
+				<artifactId>blu-api-taobao</artifactId>
+				<version>${api.taobao.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>com.blu</groupId>
 				<artifactId>blu-common-api</artifactId>
@@ -97,9 +105,14 @@
 			<dependency>
 				<groupId>com.blu</groupId>
 				<artifactId>blu-common-jsb</artifactId>
-				<version>${common.version}</version>
+				<version>${common.jsb.version}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>com.blu</groupId>
+				<artifactId>blu-security-oauth2</artifactId>
+				<version>${security.oauth2.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>org.jsoup</groupId>
@@ -232,12 +245,12 @@
 
 		</dependencies>
 	</dependencyManagement>
+
 	<distributionManagement>
 		<repository>
 			<id>github</id>
-			<name>GitHub OWNER Apache Maven Packages</name>
+			<name>GitHub blu Apache Maven Packages</name>
 			<url>https://maven.pkg.github.com/yaoqiangpersonal/blu-common-bom</url>
 		</repository>
 	</distributionManagement>
-
 </project>
