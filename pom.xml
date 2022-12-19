@@ -18,7 +18,7 @@
 	<properties>
 		<mysql.connector.version>8.0.30</mysql.connector.version>
 		<swagger.core.version>1.5.22</swagger.core.version>
-		<common.jsb.version>1.0.3</common.jsb.version>
+		<common.jsb.version>1.0.2</common.jsb.version>
 		<common.taobao.version>1.1.0</common.taobao.version>
 		<api.taobao.version>1.0.0</api.taobao.version>
 		<common.version>1.0.0</common.version>
